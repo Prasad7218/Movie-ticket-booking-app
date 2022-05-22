@@ -1,7 +1,9 @@
+import { SelectUnstyled, selectUnstyledClasses } from '@mui/base'
 import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
   value: 0,
+  items:[],
 }
 
 export const movieSlice = createSlice({
@@ -26,10 +28,20 @@ export const movieSlice = createSlice({
      ticketprice6: (state) => {
       state.value+=100
      },
+     additems: (state,action) => {
+       state.items.push(action.payload);
+       console.log(action.payload);
+     },
+     amount: (state) =>{
+       state.value=0;
+     },
+     quantity: (state) =>{
+       state.items=[];
+     }
   },
 })
 
 // Action creators are generated for each case reducer function
-export const { ticketprice1,ticketprice2,ticketprice3,ticketprice4,ticketprice5,ticketprice6 } = movieSlice.actions
+export const { ticketprice1,ticketprice2,ticketprice3,ticketprice4,ticketprice5,ticketprice6,additems,amount,quantity } = movieSlice.actions
 
 export default movieSlice.reducer

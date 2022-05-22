@@ -2,16 +2,24 @@ import React from 'react'
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 import { useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { ProductionQuantityLimitsTwoTone } from '@mui/icons-material';
+import {amount,quantity} from '../slices/movieSlice'
 
 const Header = () => {
   const navigate=useNavigate();
+  const dispatch=useDispatch();
 
   const Homes=()=>{
   navigate('/home');
+  dispatch(amount());
+  dispatch(quantity());
 }
 
 const Ticket=()=>{
   navigate('/ticket');
+  dispatch(amount());
+  dispatch(quantity());
 }
   return (
       <>
