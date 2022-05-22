@@ -8,6 +8,7 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
+import Booking from './components/Booking'
 
 function App() {
 
@@ -15,13 +16,14 @@ function App() {
 
   return (
     <div className="App">
+        <BrowserRouter>
       <Header />
-      <BrowserRouter>
       <Routes>
       <Route path="/" element={<Home />}/>
       <Route path="/home" element={<Home />}/>
       <Route path="/ticket" element={<Ticket />}/>
       <Route path="/home" element={<Home />}/>
+      <Route path="/booking" element={<Booking />}/>
 
       </Routes>
 

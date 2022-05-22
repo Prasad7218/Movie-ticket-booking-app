@@ -8,20 +8,28 @@ export const movieSlice = createSlice({
   name: 'movie',
   initialState,
   reducers: {
-    increment: (state) => {
-     
-      state.value += 1
+    ticketprice1: (state) => {
+     state.value+=200
     },
-    decrement: (state) => {
-      state.value -= 1
-    },
-    incrementByAmount: (state, action) => {
-      state.value += action.payload
-    },
+    ticketprice2: (state) => {
+      state.value+=180
+     },
+     ticketprice3: (state) => {
+      state.value+=160
+     },
+     ticketprice4: (state) => {
+      state.value+=140
+     },
+     ticketprice5: (state) => {
+      state.value+=120
+     },
+     ticketprice6: (state) => {
+      state.value+=100
+     },
   },
 })
 
 // Action creators are generated for each case reducer function
-export const { increment, decrement, incrementByAmount } = movieSlice.actions
+export const { ticketprice1,ticketprice2,ticketprice3,ticketprice4,ticketprice5,ticketprice6 } = movieSlice.actions
 
 export default movieSlice.reducer

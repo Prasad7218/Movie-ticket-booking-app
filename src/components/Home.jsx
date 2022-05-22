@@ -10,9 +10,16 @@ import { experimentalStyled as styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid'
+import {useNavigate} from 'react-router-dom';
 
 
 const Home = () => {
+  let navigate=useNavigate();
+
+
+  const ClickHandler=()=>{
+    navigate("/ticket");
+  }
    
 
   return (
@@ -41,7 +48,7 @@ const Home = () => {
               </CardContent>
             </CardActionArea>
             <CardActions>
-              <Button size="small" color="primary">
+              <Button onClick={ClickHandler} size="small" color="primary">
                Book tickets
               </Button>
             </CardActions>
